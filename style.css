@@ -1,0 +1,102 @@
+/* 
+Tipografia: Poppins
+Weight: Regular, Medium, SemiBold, Bold
+
+body max-width: 1440px
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+
+    margin-top: 64px;
+    margin-bottom: 72px;
+}
+
+main header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* #header-title{
+    border: 3px solid purple;
+} */
+
+header nav{
+    word-spacing: 33.5px;
+}
+
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 164px;
+    margin-bottom: 110px;
+}
+
+.user-photo{
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    width: 400px; height: 400px;
+    margin-right: 53px;
+}
+
+.content{
+    border: 1px dashed blue;
+}
+
+.followers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.followers header{
+    border: 1px solid purple;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 81px;
+    margin-right: 925px;
+}
+
+.followers header p{
+    margin-left: 16px;
+}
+
+.followers header .line{
+    width: 64px; height: 8px;
+    background-color: black;
+}
+
+.followers-grid{
+    display: grid;
+    grid-template-columns: 427px 422px 266px;
+    grid-template-rows: 350px 266px;
+}
+
+.follower-photo{
+    border: 1px solid red;
+    border-radius: 4px;
+    width: 266px; height: 266px;
+}

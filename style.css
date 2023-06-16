@@ -92,7 +92,8 @@ header nav{
 .followers-grid{
     display: grid;
     grid-template-columns: 427px 422px 266px;
-    grid-template-rows: 350px 266px;
+    grid-template-rows: 350px 350px;
+    margin-bottom: 54px;
 }
 
 .follower-photo{

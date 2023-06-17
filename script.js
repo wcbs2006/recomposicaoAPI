@@ -7,10 +7,12 @@ fetch('https://api.github.com/users/wcbs2006')
     .then(response => response.json())
     .then(data =>{
         const username = data.name;
+        document.title = 'Perfil - '+ username;
         usernameElement.textContent = username;
         let contentUsernameElement = document.querySelector('.content .username');
+        let direitosElement = document.querySelector('.direitos');
         contentUsernameElement.textContent = username;
-        document.title = 'Perfil - '+ username;
+        direitosElement.textContent = `Todos os direitos reservados a ${username}`;
 
         const photo = data.avatar_url;
         userPhotoElement.src = photo;
@@ -62,4 +64,24 @@ fetch('https://api.github.com/users/wcbs2006/followers')
     .catch(error => {
         console.error("Erro:", error);
     });
+
+
+    // Validação Input
+    const form = document.querySelector('.form')
+
+    form.addEventListener('submit', event =>{
+        event.preventDefault(); //Impede envio automático
+
+        const emailInput = document.querySelector('.email')
+        const passwordInput = document.querySelector('.password')
+        const messageTextarea = document.querySelector(".message")
+        const inputs = [emailInput, passwordInput, messageTextarea]
+        inputs.forEach(input => {
+            if(input.value === ''){
+                input.classList.add('error'); // Adiciona a classe 'error' para campos vazios
+            }else{
+                input.classList.remove('error'); // Remove a classe 'error' quando os campos estiverem preenchidos
+            }
+        })
+    })
 

@@ -63,14 +63,14 @@ header nav{
     border: 1px dashed blue;
 }
 
-.followers{
+main section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.followers header{
+main section header{
     border: 1px solid purple;
     
     display: flex;
@@ -80,11 +80,11 @@ header nav{
     margin-right: 925px;
 }
 
-.followers header p{
+.section-title{
     margin-left: 16px;
 }
 
-.followers header .line{
+main section header .line{
     width: 64px; height: 8px;
     background-color: black;
 }
@@ -97,7 +97,84 @@ header nav{
 }
 
 .follower-photo{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 4px;
     width: 266px; height: 266px;
+}
+
+.contact{
+    margin-top: 69px;
+    margin-bottom: 181.81px;
+}
+
+.contact header{
+    margin-bottom: 54px;
+}
+
+
+.contact .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 78px;
+
+}
+
+.contact .container .form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.email, .password, .message{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22.28px;
+}
+
+.form form label{
+    margin-bottom: 16.17px;
+}
+
+.form form input{
+    padding: 16.78px 22.28px;
+}
+
+.form form textarea{
+    padding: 16.71px 22.28px 71.0175px;
+}
+
+.form form button{
+    padding: 16.71px 22.28px
+}
+
+.error{
+    border: 2px solid red;
+    color: red;
+}
+
+.photo-and-decor {
+    position: relative;
+    margin-top: 127px;
+}
+
+.contact-photo{
+    position: relative;
+    z-index: 1;
+    width: 424px; height: 360px;
+    
+}
+
+.square{
+    width: 424px; height: 360px;
+    /* border: 1px solid red; */
+    background-color: bisque;
+    position: absolute;
+    top: -56px;
+    right: -56px;
+    z-index: 1;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

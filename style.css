@@ -12,9 +12,20 @@ body max-width: 1440px
     box-sizing: border-box;
 }
 
+:root{
+    --indigo: #A5B4FC;
+    --slate: #94A3B8;
+    --contact-grey: #E5E7EB;
+}
+
 body{
     max-width: 1440px;
     margin: 0 auto;
+    font-family: Poppins, sans-serif;
+}
+
+button, form input, form textarea, form input::placeholder, form textarea::placeholder{
+    font-family: Poppins, sans-serif;
 }
 
 main{
@@ -34,12 +45,20 @@ main header{
     justify-content: space-around;
 }
 
-/* #header-title{
-    border: 3px solid purple;
-} */
+#header-title{
+    font-size: 36px;
+    font-weight: 600;
+    
+}
 
 header nav{
     word-spacing: 33.5px;
+    font-size: 32px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -51,7 +70,6 @@ header nav{
     margin-top: 164px;
     margin-bottom: 110px;
 }
-
 .user-photo{
     /* border: 1px solid red; */
     border-radius: 50%;
@@ -59,9 +77,57 @@ header nav{
     margin-right: 53px;
 }
 
-.content{
-    border: 1px dashed blue;
+.user-nickname{
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--slate);
 }
+
+.username#profile{
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.desc{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--slate);
+    margin-bottom: 24px;
+}
+
+.profile .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.profile .buttons button{
+    display: flex;
+    justify-content: space-around;
+    padding: 18.5px 39px;
+    border: 3px solid var(--indigo);
+    background-color: transparent;
+    border-radius: 50px;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.profile .buttons button + button{
+    margin-left: 39px;
+}
+
+.profile .buttons .contato a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* .content{
+    border: 1px dashed blue;
+} */
 
 main section{
     display: flex;
@@ -71,8 +137,7 @@ main section{
 }
 
 main section header{
-    border: 1px solid purple;
-    
+    /* border: 1px solid purple; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -82,11 +147,14 @@ main section header{
 
 .section-title{
     margin-left: 16px;
+    font-size: 48px;
+    font-weight: 500;
 }
 
 main section header .line{
     width: 64px; height: 8px;
-    background-color: black;
+    background-color: var(--indigo);
+    border-radius: 5px;
 }
 
 .followers-grid{
@@ -100,6 +168,24 @@ main section header .line{
     /* border: 1px solid red; */
     border-radius: 4px;
     width: 266px; height: 266px;
+}
+
+.follower-name{
+    margin-left: 60px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.followers footer button{
+    display: flex;
+    justify-content: space-around;
+    padding: 18.5px 39px;
+    border: 3px solid var(--indigo);
+    background-color: transparent;
+    border-radius: 50px;
+
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .contact{
@@ -124,6 +210,7 @@ main section header .line{
     flex-direction: column;
 }
 
+
 .email, .password, .message{
     display: flex;
     flex-direction: column;
@@ -132,24 +219,41 @@ main section header .line{
 
 .form form label{
     margin-bottom: 16.17px;
+    color: var(--slate);
 }
 
 .form form input{
     padding: 16.78px 22.28px;
+    border-radius: 5.6px;
+    background-color: var(--contact-grey);
 }
 
 .form form textarea{
     padding: 16.71px 22.28px 71.0175px;
+    border-radius: 5.6px;
+    background-color: var(--contact-grey);
 }
 
 .form form button{
-    padding: 16.71px 22.28px
+    padding: 16.71px 22.28px;
+    border: none;
+    border-radius: 5.6px;
+    background-color: var(--indigo);
+    color: white;
+
+    font-size: 22.30px;
+    font-weight: 600;
 }
 
 .error{
     border: 2px solid red;
     color: red;
 }
+
+input.error::placeholder, textarea.error::placeholder{
+    color: red;
+}
+
 
 .photo-and-decor {
     position: relative;
@@ -166,7 +270,7 @@ main section header .line{
 .square{
     width: 424px; height: 360px;
     /* border: 1px solid red; */
-    background-color: bisque;
+    background-color: var(--indigo);
     position: absolute;
     top: -56px;
     right: -56px;
@@ -177,4 +281,21 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+footer{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+footer .social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 69.60px;
+    align-items: center;
+}
+
+footer .social-media img{
+    width: 25px;
+    height: 25px;
 }

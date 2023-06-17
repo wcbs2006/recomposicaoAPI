@@ -12,7 +12,7 @@ fetch('https://api.github.com/users/wcbs2006')
         let contentUsernameElement = document.querySelector('.content .username');
         let direitosElement = document.querySelector('.direitos');
         contentUsernameElement.textContent = username;
-        direitosElement.textContent = `Todos os direitos reservados a ${username}`;
+        direitosElement.textContent = `Todos os direitos reservados a ${username}.`;
 
         const photo = data.avatar_url;
         userPhotoElement.src = photo;
@@ -66,22 +66,44 @@ fetch('https://api.github.com/users/wcbs2006/followers')
     });
 
 
-    // Validação Input
-    const form = document.querySelector('.form')
+    // Validação Input (dando erro)
+    const form = document.querySelector('#contact-form')
+    const emailInput = document.querySelector('#email')
+    const passwordInput = document.querySelector('#password')
+    const messageTextarea = document.querySelector("#message")
+    const submitButton = document.querySelector('#submit-button')
 
     form.addEventListener('submit', event =>{
         event.preventDefault(); //Impede envio automático
 
-        const emailInput = document.querySelector('.email')
-        const passwordInput = document.querySelector('.password')
-        const messageTextarea = document.querySelector(".message")
         const inputs = [emailInput, passwordInput, messageTextarea]
         inputs.forEach(input => {
-            if(input.value === ''){
-                input.classList.add('error'); // Adiciona a classe 'error' para campos vazios
-            }else{
-                input.classList.remove('error'); // Remove a classe 'error' quando os campos estiverem preenchidos
+            input.classList.remove('error');
+        })
+        
+
+        const labels = form.querySelectorAll('label');
+        labels.forEach(label =>{
+            label.classList.remove('error-label')
+        })
+
+        let hasError = false;
+
+        inputs.forEach(input => {
+            if (input.value.trim() === '') {
+                input.classList.add('error')
+                const label = form.querySelector(`label[for='${input.id}']`)
+                label.classList.add('error-label')
+                hasError = true;
             }
         })
+
+        if (!hasError){
+            alert('Formulário enviado com sucesso!')
+            // Limpar conteúdo dos inputs
+            inputs.forEach(input => {
+                input.value = '';
+            })
+        }
     })
 

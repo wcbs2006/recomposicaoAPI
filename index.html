@@ -18,7 +18,7 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="#">Sobre</a>
-                <a href="#">Contato</a>
+                <a href="main#contact">Contato</a>
             </nav>
         </header>
         <section class="profile">
@@ -29,7 +29,7 @@
                 <p class="desc"></p>
                 <div class="buttons">
                     <button class="download">Download Currículo</button>
-                    <button class="contato"><a href="#">Contato</a></button>
+                    <button class="contato"><a href="main#contact">Contato</a></button>
                 </div>
             </div>
         </section>
@@ -65,10 +65,10 @@
                 </div> -->
             </div>
             <footer>
-                <button class="view-more-followers">Ver mais seguidores</button>
+                <button class="view-more-followers">Mais seguidores</button>
             </footer>
         </section>
-        <section class="contact">
+        <section class="contact" id="#contact">
             <header>
                 <div class="line"></div>
                 <p class="section-title">Contato</p>
@@ -76,20 +76,20 @@
 
             <div class="container">
                 <div class="form">
-                    <form action="">
+                    <form action="" id="contact-form">
                         <div class="email">
                             <label for="email">Endereço de e-mail</label>
-                            <input type="email" placeholder="dummy@example.com" >
+                            <input type="email" id="email" placeholder="dummy@example.com" >
                         </div>
                         <div class="password">
                             <label for="password">Senha</label>
-                            <input type="password" placeholder="••••••••">
+                            <input type="password" id="password" placeholder="••••••••">
                         </div>
                         <div class="message">
                             <label for="message">Mensagem</label>
-                            <textarea name="message" id="message-space" placeholder="Escreva sua mensagem"></textarea>
+                            <textarea name="message" id="message" placeholder="Escreva sua mensagem"></textarea>
                         </div>
-                        <button type="submit">Enviar</button>
+                        <button type="submit" id="submit-button">Enviar</button>
                     </form>
                 </div>
                 <div class="photo-and-decor">
